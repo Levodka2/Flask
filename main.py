@@ -50,7 +50,7 @@ def delete_twit():
     return jsonify({'error': 'Twit not found'})
 
 
-@app.route('/twit', methods=['GET'])  #Функция на просмотр всех твитов
+@app.route('/twit/', methods=['GET'])  #Функция на просмотр всех твитов
 def read_twit():
     serialized_twits = [twit.to_dict() for twit in twits]
     return jsonify({'twits': serialized_twits})
