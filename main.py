@@ -29,7 +29,7 @@ def create_twit():
     return jsonify({'status': 'success'})
 
 
-@app.route('/twit/', methods=['PUT'])  # Функция изменения твита
+@app.route('/twit/<twit_id>/', methods=['PUT'])  # Функция изменения твита
 def update_twit():
     twit_json = request.get_json()
     for twit in twits:
@@ -40,7 +40,7 @@ def update_twit():
     return jsonify({'error': 'Twit not found'})
 
 
-@app.route('/twit/', methods=['DELETE'])
+@app.route('/twit/<twit_id>/', methods=['DELETE']) #Функция удаления твита
 def delete_twit():
     twit_json = request.get_json()
     for twit in twits:
