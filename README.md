@@ -26,9 +26,78 @@ def read_twit():
     pass
 
 4) DELETE /twit/1 HTTP/1.1
-@app.route('/twit/', methods=['DELETE'])
+@app.route('/twit/', methods=['DELETE']) # Функция удаления твита
 def delete_twit():
     pass
 
-Тестирование: 
-1) GET  http://127.0.0.1:5000/twit
+# Тестирование: 
+
+1) POST http://127.0.0.1:5000/twit
+   
+   REQUESTS:
+   {"id": 1, "body": "body 1", "author": "@levodka2"}
+   {"id": 2, "body": "body 2", "author": "@levodka2"}
+   
+   RESPONSES:
+   {
+    "status": "success"
+   }
+   
+   {
+    "status": "success"
+   }
+
+
+2) GET  http://127.0.0.1:5000/twit
+   
+   RESPONSE:
+   {
+    "twits": [
+        {
+            "author": "@levodka2",
+            "body": "body 2",
+            "id": 2
+        },
+        {
+            "author": "@levodka2",
+            "body": "body 1",
+            "id": 1
+        }
+    ]
+}
+
+3) PUT http://127.0.0.1:5000/twit
+   REQUEST:
+
+   {"id": 1, "body": "NEW BODY", "author": "@levodka2"}
+
+  RESPONSE:
+  {
+    "status": "success"
+  }
+
+4) DELETE http://127.0.0.1:5000/twit
+
+  REQUEST:
+   
+   {"id": 1, "body": "NEW BODY", "author": "@levodka2"}
+   
+  RESPONSE:
+  
+  {
+    "status": "success"
+  }
+
+  6)  GET  http://127.0.0.1:5000/twit
+   
+   RESPONSE: 
+   
+   {
+    "twits": [
+        {
+            "author": "@levodka2",
+            "body": "body 2",
+            "id": 2
+        }
+    ]
+}
