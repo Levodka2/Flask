@@ -47,7 +47,6 @@ def delete_twit():
     "status": "success"
    }
 
-
 2) GET  http://127.0.0.1:5000/twit
    
    RESPONSE:
@@ -64,7 +63,7 @@ def delete_twit():
             "id": 1
         }
     ]
-}
+    }
 
 3) PUT http://127.0.0.1:5000/twit
    
@@ -72,28 +71,28 @@ def delete_twit():
 
    {"id": 1, "body": "NEW BODY", "author": "@levodka2"}
 
-  RESPONSE:
-  {
+   RESPONSE:
+   {
     "status": "success"
-  }
+   }
 
 4) DELETE http://127.0.0.1:5000/twit
 
-  REQUEST:
+   REQUEST:
    
    {"id": 1, "body": "NEW BODY", "author": "@levodka2"}
    
-  RESPONSE:
+   RESPONSE:
   
-  {
+   {
     "status": "success"
-  }
+   }
 
 5)  GET  http://127.0.0.1:5000/twit
    
-   RESPONSE: 
+    RESPONSE: 
    
-   {
+    {
     "twits": [
         {
             "author": "@levodka2",
@@ -101,4 +100,4 @@ def delete_twit():
             "id": 2
         }
     ]
-}
+    }
