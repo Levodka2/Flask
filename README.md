@@ -29,3 +29,6 @@ def read_twit():
 @app.route('/twit/', methods=['DELETE'])
 def delete_twit():
     pass
+
+Тестирование: 
+1) GET  http://127.0.0.1:5000/twit
