@@ -67,6 +67,7 @@ def delete_twit():
 }
 
 3) PUT http://127.0.0.1:5000/twit
+   
    REQUEST:
 
    {"id": 1, "body": "NEW BODY", "author": "@levodka2"}
@@ -88,7 +89,7 @@ def delete_twit():
     "status": "success"
   }
 
-  6)  GET  http://127.0.0.1:5000/twit
+5)  GET  http://127.0.0.1:5000/twit
    
    RESPONSE: 
    
